@@ -41,3 +41,6 @@ class DateEntry(tk.Frame):
                 variable.set(value[:n])  # remove extra data
                 entry.tk_focusNext().focus()  # move onto the next item automatically
         variable.trace('w', limit)  # add callback
+
+    def get(self):
+        return (self.day.get(), self.month.get(), self.year.get())
